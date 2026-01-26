@@ -11,4 +11,13 @@ indexRouter.get("/home", (req, res) => {
 });
 
 
+indexRouter.get("/sign-up", (req, res) => {
+    res.status(200).render("sign-up");
+});
+
+indexRouter.get("/log-in", (req, res) => {
+    res.status(200).render("log-in");
+});
+
+
 module.exports = indexRouter;
