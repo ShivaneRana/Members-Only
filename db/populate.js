@@ -1,8 +1,12 @@
 #!/usr/bin/env node
-const {Client} = require("pg");
-const {argv} = require("node:process");
+const { Client } = require("pg");
+const { argv } = require("node:process");
 const path = require("node:path");
-const dotenv = require("dotenv").config({path: path.resolve(__dirname,"../.env"),quiet:true,debug:false});
+const dotenv = require("dotenv").config({
+  path: path.resolve(__dirname, "../.env"),
+  quiet: true,
+  debug: false,
+});
 
 let DATABASE_STRING;
 
@@ -25,32 +29,32 @@ let createTable = `
     )
 `;
 
-if(argv[2] === "dev"){
-    console.log("Development database choosen");
-    DATABASE_STRING = process.env.DATABASE_STRING_DEV;
-}else if(argv[2] === "prod"){
-    console.log("Production database choosen");
-    DATABASE_STRING = process.env.DATABASE_STRING_PROD;
-};
-
-async function main(){
-    const client = new Client({
-        connectionString: DATABASE_STRING
-    })
-
-    console.log(DATABASE_STRING);
-    console.log("connecting to database.");
-
-    try{
-        console.log("running query.....")
-        await client.connect();
-        await client.query(createUser);
-    }catch(err){
-        console.error(err);
-    }finally{
-        console.log("connection ended.");
-        await client.end();
-    }
+if (argv[2] === "dev") {
+  console.log("Development database choosen");
+  DATABASE_STRING = process.env.DATABASE_STRING_DEV;
+} else if (argv[2] === "prod") {
+  console.log("Production database choosen");
+  DATABASE_STRING = process.env.DATABASE_STRING_PROD;
 }
 
-main()
+async function main() {
+  const client = new Client({
+    connectionString: DATABASE_STRING,
+  });
+
+  console.log(DATABASE_STRING);
+  console.log("connecting to database.");
+
+  try {
+    console.log("running query.....");
+    await client.connect();
+    await client.query(createUser);
+  } catch (err) {
+    console.error(err);
+  } finally {
+    console.log("connection ended.");
+    await client.end();
+  }
+}
+
+main();

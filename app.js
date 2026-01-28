@@ -6,12 +6,11 @@ const dotenv = require("dotenv").config({ quiet: true, debug: false });
 // Routers
 const indexRouter = require("./routers/indexRouter.js");
 
-
 const app = express();
-app.set("view engine","ejs");
-app.set("views",path.join(__dirname,"views"));
-app.use(express.urlencoded({extended:true}));
-app.use(express.static(path.join(__dirname,"public")));
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
+app.use(express.urlencoded({ extended: true }));
+app.use(express.static(path.join(__dirname, "public")));
 
 app.use("/", indexRouter);
 

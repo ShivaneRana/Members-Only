@@ -1,118 +1,122 @@
-:root{
-    scroll-behavior: smooth;
+:root {
+  scroll-behavior: smooth;
 }
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
-body{
-    width: 100%;
-    min-height: 100vh;
-    font-family: Arial,'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
-    font-size: 16px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+body {
+  width: 100%;
+  min-height: 100vh;
+  font-family:
+    Arial, "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+    "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+  font-size: 16px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-main{
-    margin: 20px 20px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+main {
+  margin: 20px 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.link{
-    font-size: 18px;
-    text-decoration: none;
-    display: inline-block;
-    color: black;
+.link {
+  font-size: 18px;
+  text-decoration: none;
+  display: inline-block;
+  color: black;
 }
 
-.link:hover{
-    text-decoration: underline;
+.link:hover {
+  text-decoration: underline;
 }
 
-.navbar{
-    position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 19px;
+.navbar {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  padding: 19px;
 }
 
-.navbar > ul{
-    display: flex;
-    list-style: none;
-    align-items: center;
+.navbar > ul {
+  display: flex;
+  list-style: none;
+  align-items: center;
 }
 
-.navbar > ul > li:nth-child(1){
-    width: 50%;
-    display: flex;
-    align-items: center;
+.navbar > ul > li:nth-child(1) {
+  width: 50%;
+  display: flex;
+  align-items: center;
 }
 
-.navbar > ul > li:nth-child(1) > a{
-    margin-right: 20px;
-    min-width: max-content;
-    font-size: 24px;
+.navbar > ul > li:nth-child(1) > a {
+  margin-right: 20px;
+  min-width: max-content;
+  font-size: 24px;
 }
 
-.navbar > ul > div{
-    width: 50%;
-    display: flex;
-    list-style: none;
-    align-items: center;
-    justify-content: flex-end;
+.navbar > ul > div {
+  width: 50%;
+  display: flex;
+  list-style: none;
+  align-items: center;
+  justify-content: flex-end;
 }
 
-.navbar > ul > div > li{
-    margin-left: 50px;
-    min-width: max-content;
+.navbar > ul > div > li {
+  margin-left: 50px;
+  min-width: max-content;
 }
 
-.welcome-header{
-    font-size: 40px;
-    text-align: center;
+.welcome-header {
+  font-size: 40px;
+  text-align: center;
 }
 
-.welcome-board{
-    position: relative;
-    width: 40%;
-    min-width: 350px;
-    outline: 3px black solid;
-    border-radius: 10px;
-    padding: 40px 80px;
-    font-size: 18px;
-    text-align: center;
-    margin-top: 250px;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+.welcome-board {
+  position: relative;
+  width: 40%;
+  min-width: 350px;
+  outline: 3px black solid;
+  border-radius: 10px;
+  padding: 40px 80px;
+  font-size: 18px;
+  text-align: center;
+  margin-top: 250px;
+  box-shadow:
+    rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
+    rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
 }
 
 .welcome-board > p {
-    min-width: 350px;
-    margin-bottom: 20px;
-    line-height: 1.2em;
-    font-size: 20px;
+  min-width: 350px;
+  margin-bottom: 20px;
+  line-height: 1.2em;
+  font-size: 20px;
 }
 
-.welcome-board > div{
-    width: 300px;
-    display: flex;
-    justify-content: space-around;
+.welcome-board > div {
+  width: 300px;
+  display: flex;
+  justify-content: space-around;
 }
 
-.chat-img{
-    position: absolute;
-    top:-250px;
-    width: 300px;
-    height: 300px;
-    animation: float 2s ease-in-out infinite;
+.chat-img {
+  position: absolute;
+  top: -250px;
+  width: 300px;
+  height: 300px;
+  animation: float 2s ease-in-out infinite;
 }
 
 @keyframes float {
