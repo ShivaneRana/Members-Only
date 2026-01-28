@@ -1,10 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("./partials/head",{title: ""})%>
-    </head>
-    <body>
-        <%- include("./partials/navbar")%>
-        <h1>This is a message board  for members only.</h1>
-    </body>
+<head>
+    <%- include("./partials/head",{title: ""})%>
+</head>
+<body>
+    <%- include("./partials/navbar")%>
+        <h1>Welcome to members only.</h1>
+        <main class="welcome-board">
+            <p>This is a messaging board where users can discuss everything and anything.</p>
+            <div>
+                <a class="link" href="/sign-up">Sign Up</a>
+                <a class="link" href="/log-in">Log In</a>
+            </div>
+        </main>
+</body>
+
 </html>
