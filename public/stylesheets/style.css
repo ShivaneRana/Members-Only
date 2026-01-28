@@ -27,6 +27,7 @@ main {
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  margin-top: 80px;
 }
 
 .link {
@@ -44,7 +45,8 @@ main {
   position: fixed;
   top: 0;
   width: 100%;
-  padding: 19px;
+  height: 80px;
+  padding: 20px;
 }
 
 .navbar > ul {
@@ -78,11 +80,6 @@ main {
   min-width: max-content;
 }
 
-.welcome-header {
-  font-size: 40px;
-  text-align: center;
-}
-
 .welcome-board {
   position: relative;
   width: 40%;
@@ -92,7 +89,6 @@ main {
   padding: 40px 80px;
   font-size: 18px;
   text-align: center;
-  margin-top: 250px;
   box-shadow:
     rgba(50, 50, 93, 0.25) 0px 50px 100px -20px,
     rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
@@ -100,7 +96,7 @@ main {
 
 .welcome-board > p {
   min-width: 350px;
-  margin-bottom: 20px;
+  margin: 20px 0px;
   line-height: 1.2em;
   font-size: 20px;
 }
