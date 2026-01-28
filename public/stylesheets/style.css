@@ -76,8 +76,53 @@ main{
     min-width: max-content;
 }
 
+.welcome-header{
+    font-size: 40px;
+    text-align: center;
+}
+
 .welcome-board{
-    outline: 2px black dashed;
+    position: relative;
+    width: 40%;
+    min-width: 350px;
+    outline: 3px black solid;
     border-radius: 10px;
-    padding: 20px;
+    padding: 40px 80px;
+    font-size: 18px;
+    text-align: center;
+    margin-top: 250px;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px;
+}
+
+.welcome-board > p {
+    min-width: 350px;
+    margin-bottom: 20px;
+    line-height: 1.2em;
+    font-size: 20px;
+}
+
+.welcome-board > div{
+    width: 300px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.chat-img{
+    position: absolute;
+    top:-250px;
+    width: 300px;
+    height: 300px;
+    animation: float 2s ease-in-out infinite;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
 }
