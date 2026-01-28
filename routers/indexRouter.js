@@ -24,5 +24,12 @@ indexRouter.get("/log-in", (req, res) => {
     res.status(200).render("log-in");
 });
 
+indexRouter.get("/member", (req, res) => {
+    res.status(200).render("member");
+});
+
+indexRouter.get("/admin", (req, res) => {
+    res.status(200).render("admin");
+});
 
 module.exports = indexRouter;
