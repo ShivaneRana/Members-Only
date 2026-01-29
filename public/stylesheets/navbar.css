@@ -85,8 +85,8 @@
     }
 }
 
-@media (max-width: 960px){
-    .navbar > ul > li > a >  h2{
+@media (max-width: 960px) {
+    .navbar > ul > li > a > h2 {
         display: none;
     }
 }

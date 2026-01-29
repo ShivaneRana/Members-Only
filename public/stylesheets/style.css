@@ -25,7 +25,7 @@ main {
     align-items: center;
 }
 
-.welcome-board{
+.welcome-board {
     min-width: 400px;
     display: flex;
     flex-direction: column;
