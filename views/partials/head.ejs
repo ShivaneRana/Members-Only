@@ -1,5 +1,7 @@
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<link rel="stylesheet" href="./stylesheets/style.css" type="text/css">
+<% for(let i = 0; i <= locals.style.length - 1; i++ ){ %>
+    <link rel="stylesheet" href="./stylesheets/<%= locals.style[i] %>.css" type="text/css">
+<% } %>
 <link rel="icon" href="./images/favicon.svg" type="image/svg">
 <title>
     Members only 
