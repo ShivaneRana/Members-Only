@@ -1,25 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <%- include("./partials/head",{title: "Login",style:['style']})%>
+    <%- include("./partials/head",{title: "Login",style:['style','form']})%>
 </head>
 <body>
     <%- include("./partials/navbar")%>
-        <h1>log In</h1>
+        <h1>Log In</h1>
         <form class="form">
             <section>
                 <label for="username">Username</label>
                 <br>
                 <input name="username" type="text" placeholder="Username" autocomplete="username" required>
             </section>
-            <br>
             <section>
                 <label for="password">Password</label>
                 <br>
-                <input name="password" type="text" placeholder="password" autocomplete="current-password" required>
+                <input name="password" type="password" placeholder="password" autocomplete="current-password" required>
             </section>
-            <br>
-        <button>Log In</button>
+        <div class="button-holder">
+            <button type="reset">Clear</button>
+            <button type="submit">Log In</button>
+        </div>
         </form>
         <p>Don't have an account? <a class="link" href="sign-up">Sign Up</a></p>
 </body>
