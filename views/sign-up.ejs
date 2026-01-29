@@ -1,12 +1,50 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <%- include("./partials/head",{title: "Signup",style:['style']})%>
-    </head>
-    <body>
-        <%- include("./partials/navbar")%>
+<head>
+    <%- include("./partials/head",{title: "Signup" ,style:['style']})%>
+</head>
+<body>
+    <%- include("./partials/navbar")%>
         <h1>Sign Up</h1>
+        <form class="form">
+            <div>
+                <section>
+                    <label for="firstname">First name</label>
+                    <br>
+                    <input name="firstname" placeholder="First name" type="text" autocomplete="given-name" required>
+                </section>
+                <section>
+                    <label for="lastname">Last name</label>
+                    <br>
+                    <input name="lastname" placeholder="Last name" type="text" autocomplete="family-name" required>
+                </section>
+            </div>
+            <section>
+                <label for="email">Email</label>
+                <br>
+                <input name="email" placeholder="Email" type="email" placeholder="Email" autocomplete="email" required>
+            </section>
+            <section>
+                <label for="username">Username</label>
+                <br>
+                <input name="username" type="text" placeholder="Username" autocomplete="username" required>
+            </section>
+            <br>
+            <section>
+                <label for="password">Password</label>
+                <br>
+                <input name="password" type="text" placeholder="password" autocomplete="current-password" required>
+            </section>
+            <section>
+                <label for="confirm_password">Confirm Password</label>
+                <br>
+                <input name="confirm_password" type="text" placeholder="password" autocomplete="current-password"
+                    required>
+            </section>
+            <br>
+            <button>Sign Up</button>
+        </form>
         <br>
         <p>Already have an account? <a class="link" href="log-in">Log In</a></p>
-    </body>
+</body>
 </html>
