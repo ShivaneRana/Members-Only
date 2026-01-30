@@ -15,7 +15,7 @@ let createTable = `
         mid INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         firstname TEXT NOT NULL,
         lastname TEXT DEFAULT '',
-        username TEXT NOT NULL,
+        username TEXT UNIQUE NOT NULL,
         password TEXT NOT NULL,
         is_member BOOLEAN DEFAULT FALSE,
         is_admin BOOLEAN DEFAULT FALSE
