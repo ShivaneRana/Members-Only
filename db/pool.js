@@ -8,18 +8,8 @@ const dotenv = require('dotenv').config({
     debug: false,
 });
 
-let CONNECTION_STRING;
-
-if (argv[2] === 'dev') {
-    console.log('Development database choosen');
-    DATABASE_STRING = process.env.DATABASE_STRING_DEV;
-} else if (argv[2] === 'prod') {
-    console.log('Production database choosen');
-    DATABASE_STRING = process.env.DATABASE_STRING_PROD;
-};
-
 const pool = new Pool({
-    connectionString: CONNECTION_STRING
+    connectionString: process.env.DATABASE_STRING_DEV
 });
 
 module.exportst = pool;
