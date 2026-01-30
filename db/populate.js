@@ -11,7 +11,7 @@ const dotenv = require('dotenv').config({
 let DATABASE_STRING;
 
 let createTable = `
-    CREATE TABLE members(
+    CREATE TABLE IF NOT  EXISTS members(
         mid INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         first_name TEXT NOT NULL,
         last_name TEXT DEFAULT '',
@@ -21,12 +21,30 @@ let createTable = `
         is_admin BOOLEAN DEFAULT FALSE
     );
 
-    CREATE TABLE global_chat(
+    CREATE TABLE IF NOT  EXISTS global_chat(
         tid INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
         message_text TEXT NOT NULL,
         created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         mid INT REFERENCES members(mid)
     )
+`;
+
+let insertData = `
+    INSERT INTO members (first_name, last_name, username, password, is_member, is_admin)
+    VALUES
+    ('Alice',   'Smith',   'alice',   'password1', TRUE,  FALSE),
+    ('Bob',     'Jones',   'bob',     'password2', TRUE,  FALSE),
+    ('Charlie', 'Brown',   'charlie', 'password3', TRUE,  FALSE),
+    ('Diana',   'Prince',  'diana',   'password4', TRUE,  TRUE),
+    ('Eve',     'Taylor',  'eve',     'password5', FALSE, FALSE),
+    ('Frank',   'Miller',  'frank',   'password6', TRUE,  FALSE);
+
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',1);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',2);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',3);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',4);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',5);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',6);
 `;
 
 if (argv[2] === 'dev') {
@@ -48,7 +66,7 @@ async function main() {
     try {
         console.log('running query.....');
         await client.connect();
-        await client.query(createUser);
+        await client.query(insertData);
     } catch (err) {
         console.error(err);
     } finally {
