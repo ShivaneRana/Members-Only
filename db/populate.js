@@ -13,8 +13,8 @@ let DATABASE_STRING;
 let createTable = `
     CREATE TABLE IF NOT  EXISTS members(
         mid INT PRIMARY KEY GENERATED ALWAYS AS IDENTITY,
-        first_name TEXT NOT NULL,
-        last_name TEXT DEFAULT '',
+        firstname TEXT NOT NULL,
+        lastname TEXT DEFAULT '',
         username TEXT NOT NULL,
         password TEXT NOT NULL,
         is_member BOOLEAN DEFAULT FALSE,
@@ -30,7 +30,7 @@ let createTable = `
 `;
 
 let insertData = `
-    INSERT INTO members (first_name, last_name, username, password, is_member, is_admin)
+    INSERT INTO members (firstname, lastname, username, password, is_member, is_admin)
     VALUES
     ('Alice',   'Smith',   'alice',   'password1', TRUE,  FALSE),
     ('Bob',     'Jones',   'bob',     'password2', TRUE,  FALSE),
@@ -66,6 +66,7 @@ async function main() {
     try {
         console.log('running query.....');
         await client.connect();
+        await client.query(createTable);
         await client.query(insertData);
     } catch (err) {
         console.error(err);
