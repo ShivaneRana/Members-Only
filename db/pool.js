@@ -1,5 +1,4 @@
 #!/usr/bin/env node
-
 const {Pool} = require("pg");
 const path = require('node:path');
 const dotenv = require('dotenv').config({
@@ -12,4 +11,4 @@ const pool = new Pool({
     connectionString: process.env.DATABASE_STRING_DEV
 });
 
-module.exportst = pool;
+module.exports = pool;
