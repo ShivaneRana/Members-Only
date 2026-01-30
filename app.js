@@ -14,6 +14,15 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 
+app.use((req,res) => {
+    res.status(404).render('404');
+})
+
+app.use((err,req,res,next) => {
+    console.error(err);
+    res.status(500).render('error');
+})
+
 app.listen(3000, (err) => {
     if (err) {
         console.error(err);
