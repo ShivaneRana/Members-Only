@@ -48,7 +48,7 @@ exports.renderSignupPage = (req,res) => {
     return res.status(200).render('sign-up');
 }
 
-exports.postAddUser = [
+exports.postSignupUser = [
     validationObject,
     async (req, res) => {
         const errors = validationResult(req);
