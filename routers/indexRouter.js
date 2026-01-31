@@ -1,5 +1,4 @@
 const { Router } = require('express');
-const loginController = require("../controllers/loginController.js");
 
 const indexRouter = Router();
 
@@ -13,10 +12,6 @@ indexRouter.get('/home', (req, res) => {
 
 indexRouter.get('/post{s}', (req, res) => {
     res.status(200).render('posts');
-});
-
-indexRouter.get('/log-in', (req, res) => {
-    res.status(200).render('log-in');
 });
 
 indexRouter.get('/member', (req, res) => {
