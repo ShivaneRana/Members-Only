@@ -44,9 +44,9 @@ const validationObject = [
         .withMessage('Passwords do not match'),
 ];
 
-exports.renderSignupPage = (req,res) => {
+exports.renderSignupPage = (req, res) => {
     return res.status(200).render('sign-up');
-}
+};
 
 exports.postSignupUser = [
     validationObject,
