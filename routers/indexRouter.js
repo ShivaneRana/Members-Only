@@ -10,10 +10,6 @@ indexRouter.get('/home', (req, res) => {
     res.status(200).render('index');
 });
 
-indexRouter.get('/post{s}', (req, res) => {
-    res.status(200).render('posts');
-});
-
 indexRouter.get('/member', (req, res) => {
     res.status(200).render('member');
 });
