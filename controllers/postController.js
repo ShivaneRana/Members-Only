@@ -1,4 +1,3 @@
-exports.renderPosts = (req,res) => {
+exports.renderPosts = (req, res) => {
     res.status(200).render('posts');
-}
-
+};

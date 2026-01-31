@@ -18,7 +18,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 app.use('/', indexRouter);
 app.use('/sign-up', signupRouter);
 app.use('/log-in', loginRouter);
-app.use('/post{s}',postRouter)
+app.use('/post{s}', postRouter);
 
 app.use((req, res) => {
     res.status(404).render('404');
