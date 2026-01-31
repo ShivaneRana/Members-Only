@@ -5,36 +5,45 @@
 </head>
 <body>
     <%- include("./partials/navbar")%>
+
         <main>
         <h1>Sign Up</h1>
-        <form class="form">
+
+        <% if(locals.errors){ %>
+        <ul class="error-list">
+        <% for(let i=0;i < locals.errors.length;i++){ %>
+            <li><%= locals.errors[i].msg %></li>
+        <% } %>
+        </ul>
+        <% } %>
+
+        <form class="form" method="post">
             <div class="name-holder">
                 <section class="section-label">
-                    <label for="firstname">First name</label>
+                    <label for="firstname">First name*</label>
                     <br>
                     <input name="firstname" placeholder="First name" type="text" autocomplete="given-name" required>
                 </section>
                 <section class="section-label">
-                    <label for="lastname">Last name</label>
+                    <label for="lastname">Last name*</label>
                     <br>
                     <input name="lastname" placeholder="Last name" type="text" autocomplete="family-name" required>
                 </section>
             </div>
             <section class="section-label">
-                <label for="username">Username</label>
+                <label for="username">Username*</label>
                 <br>
                 <input name="username" type="text" placeholder="Username" autocomplete="username" required>
             </section>
             <section class="section-label">
-                <label for="password">Password</label>
+                <label for="password">Password*</label>
                 <br>
                 <input name="password" type="password" placeholder="Password" autocomplete="current-password" required>
             </section>
             <section class="section-label">
-                <label for="confirm_password">Confirm Password</label>
+                <label for="confirm_password">Confirm Password*</label>
                 <br>
-                <input name="confirm_password" type="password" placeholder="Confirm password" autocomplete="current-password"
-                    required>
+                <input name="confirm_password" type="password" placeholder="Confirm password" autocomplete="current-password" required>
             </section>
             <div class="button-holder">
                 <button type="reset">Clear</button>
