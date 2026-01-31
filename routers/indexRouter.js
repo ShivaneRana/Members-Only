@@ -1,4 +1,5 @@
 const { Router } = require('express');
+const signupController = require('../controllers/signupController.js');
 
 const indexRouter = Router();
 
@@ -17,6 +18,8 @@ indexRouter.get('/post{s}', (req, res) => {
 indexRouter.get('/sign-up', (req, res) => {
     res.status(200).render('sign-up');
 });
+
+indexRouter.post('/sign-up', signupController.postAddUser);
 
 indexRouter.get('/log-in', (req, res) => {
     res.status(200).render('log-in');
