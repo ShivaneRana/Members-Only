@@ -49,11 +49,11 @@ main {
     color: red;
 }
 
-.global-posts{
+.global-posts {
     width: 70%;
 }
 
-.posts{
+.posts {
     border: none;
     outline: 2px solid black;
     margin: 0px 20px 50px 20px;
@@ -63,7 +63,7 @@ main {
     gap: 10px;
 }
 
-.post-header{
+.post-header {
     width: 70%;
     display: flex;
     flex-direction: column;
@@ -73,11 +73,11 @@ main {
     gap: 10px;
 }
 
-.post-header > label{
+.post-header > label {
     font-size: 16px;
 }
 
-.post-header > textarea{
+.post-header > textarea {
     width: 100%;
     height: 100px;
     resize: none;
@@ -85,8 +85,7 @@ main {
     font-size: 16px;
 }
 
-
-.button-container > button{
+.button-container > button {
     width: 100px;
     padding: 10px;
     font-size: 16px;

@@ -10,12 +10,16 @@ exports.addMember = async (obj) => {
     );
 };
 
-exports.fetchPosts = async() => {
-    try{
-        const rows = (await pool.query("SELECT m.username,m.is_member,m.is_admin,g.created_at,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;")).rows;
+exports.fetchPosts = async () => {
+    try {
+        const rows = (
+            await pool.query(
+                'SELECT m.username,m.is_member,m.is_admin,g.created_at,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;'
+            )
+        ).rows;
         return rows;
-    }catch(err){
+    } catch (err) {
         console.error(err);
         return [];
     }
-}
+};
