@@ -6,6 +6,7 @@ const dotenv = require('dotenv').config({ quiet: true, debug: false });
 // Routers
 const indexRouter = require('./routers/indexRouter.js');
 const signupRouter = require('./routers/signupRouter.js');
+const loginRouter = require('./routers/loginRouter.js');
 
 const app = express();
 app.set('view engine', 'ejs');
@@ -15,6 +16,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/sign-up', signupRouter);
+app.use('/log-in', loginRouter);
 
 app.use((req, res) => {
     res.status(404).render('404');
