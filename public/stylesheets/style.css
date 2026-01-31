@@ -43,3 +43,8 @@ main {
 .link:hover {
     text-decoration: underline;
 }
+
+.error-list{
+    list-style: none;
+    color: red;
+}
