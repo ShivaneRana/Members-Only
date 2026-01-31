@@ -7,14 +7,23 @@
     <%- include("./partials/navbar")%>
         <main>
         <h1>Log In</h1>
+
+        <% if(locals.errors){ %>
+        <ul class="error-list">
+        <% for(let i=0;i < locals.errors.length;i++){ %>
+            <li><%= locals.errors[i].msg %></li>
+        <% } %>
+        </ul>
+        <% } %>
+
         <form class="form">
             <section>
-                <label for="username">Username</label>
+                <label for="username">Username*</label>
                 <br>
                 <input name="username" type="text" placeholder="Username" autocomplete="username" required>
             </section>
             <section>
-                <label for="password">Password</label>
+                <label for="password">Password*</label>
                 <br>
                 <input name="password" type="password" placeholder="password" autocomplete="current-password" required>
             </section>
