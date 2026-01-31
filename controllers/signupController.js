@@ -45,7 +45,7 @@ const validationObject = [
 ];
 
 exports.renderSignupPage = (req,res) => {
-    res.status(200).render('sign-up');
+    return res.status(200).render('sign-up');
 }
 
 exports.postAddUser = [
