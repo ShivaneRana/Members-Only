@@ -8,7 +8,37 @@
         <main>
 
         <h1>Posts</h1>
-        <p>This is where all the posting will happen.</p>
+
+        <form class="post-header" method="post">
+            <label for="post_text">Enter post: </label>
+            <textarea name="post_text" placeholder="Enter posts"></textarea>
+            <div class="button-container">
+                <button type="reset">Clear</button>
+                <button type="submit">Post</button>
+            </div>
+        </form>
+
+        <!-- <div class="post-header">
+            <h3>Log in to post!</h3>
+            <a href="/log-in">Login</a>
+        </div> -->
+
+        <% if(locals.posts.length !== 0){ %>
+        <section class="global-posts">
+            <% for(let i = 0 ; i < posts.length; i++){ %>
+                <article class="posts">
+                    <p>Username: <%= posts[i].username%></p>
+                    <p>Admin: <%= posts[i].is_admin%></p>
+                    <p>Member: <%= posts[i].is_member%></p>
+                    <p>Created_at: <%= posts[i].created_at%></p>
+                    <p>Message: <%= posts[i].message_text%></p>
+                </article>
+
+            <% } %>
+        </section>
+        <% }else{ %>
+        <% } %>
+
         </main>
     </body>
 </html>
