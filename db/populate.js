@@ -26,7 +26,14 @@ let createTable = `
         message_text TEXT NOT NULL,
         created_at TIMESTAMP WITHOUT TIME ZONE DEFAULT CURRENT_TIMESTAMP,
         mid INT REFERENCES members(mid)
-    )
+    );
+
+    CREATE TABLE sessions (
+    sid TEXT PRIMARY KEY,              
+    sess JSONB NOT NULL,               
+    expire TIMESTAMPTZ NOT NULL         
+    );
+
 `;
 
 let insertData = `
