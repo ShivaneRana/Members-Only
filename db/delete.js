@@ -14,18 +14,18 @@ const deleteTable = `
     DROP TABLE member_sessions;
     DROP TABLE sessions;
 
-`
+`;
 
 const deleteInfo = async () => {
-    console.log("Deleting tables...");
-    try{
+    console.log('Deleting tables...');
+    try {
         await pool.query(deleteData);
         await pool.query(deleteTable);
-        console.log("Data deleted.");
-    }catch(err){
-        console.log(1111)
+        console.log('Data deleted.');
+    } catch (err) {
+        console.log(1111);
         console.error(err);
     }
-}
+};
 
 deleteInfo();
