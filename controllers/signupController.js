@@ -58,7 +58,7 @@ exports.postSignupUser = [
         }
 
         const { firstname, lastname, username, password } = matchedData(req);
-        db.addMember({ firstname, lastname, username, password });
+        await db.addMember({ firstname, lastname, username, password });
         return res.status(200).render('index');
     },
 ];
