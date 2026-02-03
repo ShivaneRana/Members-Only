@@ -36,3 +36,11 @@ exports.addPosts = async (id, text) => {
         console.error(err);
     }
 };
+
+exports.enableMembership = async(id) => {
+    try {
+        await pool.query('UPDATE members SET is_member = true WHERE mid = $1', [id]);
+    } catch (err) {
+        console.error(err);
+    }
+}
