@@ -6,16 +6,32 @@
     <body>
         <%- include("./partials/navbar")%>
         <main>
+        
+
+        <% if(locals.currentUser.is_admin){ %>
+            <h1>You are already a admin !</h1>
+        <% }else{ %>
+
         <h1>Become an admin.</h1>
-        <form>
+        <% if(locals.errors){ %>
+            <ul class="error-list">
+                <% for(let i=0;i < locals.errors.length;i++){ %>
+                    <li>
+                        <%= locals.errors[i].msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } %>
+        <form method="post">
             <section>
-                <label for="admin-code">Code: </label>
+                <label for="admin_code">Code: </label>
                 <br>
-                <input name="admin-code" type="text" placeholder="Enter secret code">
+                <input name="admin_code" type="text" placeholder="Enter secret code">
             </section>
             <button type="reset">Clear</button>
             <button type="submit">Submit</button>
         </form>
+        <% } %>
 
         </main>
     </body>
