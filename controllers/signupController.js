@@ -59,6 +59,6 @@ exports.postSignupUser = [
 
         const { firstname, lastname, username, password } = matchedData(req);
         await db.addMember({ firstname, lastname, username, password });
-        return res.status(200).render('index');
+        return res.status(200).redirect('/home');
     },
 ];
