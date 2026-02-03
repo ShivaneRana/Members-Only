@@ -60,7 +60,7 @@ app.post(
 );
 
 app.use('/log-in', loginRouter);
-app.use('/post{s}', postRouter);
+app.use('/posts', postRouter);
 
 app.get('/log-out', (req, res, next) => {
     req.logout((err) => {
@@ -70,18 +70,18 @@ app.get('/log-out', (req, res, next) => {
             if (err) return next(err);
 
             res.clearCookie('connect.sid');
-            res.redirect('/');
+            return res.redirect('/');
         });
     });
 });
 
 app.use((req, res) => {
-    res.status(404).render('404');
+    return res.status(404).render('404');
 });
 
 app.use((err, req, res, next) => {
     console.error(err);
-    res.status(500).render('error');
+    return res.status(500).render('error');
 });
 
 app.listen(3000, (err) => {
