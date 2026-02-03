@@ -2,7 +2,7 @@ const { Router } = require('express');
 
 const indexRouter = Router();
 
-indexRouter.get('/', (req, res) => {
+indexRouter.get('/',(req, res) => {
     res.status(200).render('index');
 });
 
