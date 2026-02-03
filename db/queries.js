@@ -10,10 +10,10 @@ exports.addMember = async (obj) => {
     );
 };
 
-exports.fetchMember = async(id) => {
-    const member = (await pool.query("SELECT * FROM members WHERE mid = $1",[id])).rows[0];
+exports.fetchMember = async (id) => {
+    const member = (await pool.query('SELECT * FROM members WHERE mid = $1', [id])).rows[0];
     return member;
-}
+};
 
 exports.fetchPosts = async () => {
     try {

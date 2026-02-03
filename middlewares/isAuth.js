@@ -1,11 +1,11 @@
-isAuth = (req,res,next) => {
-    if(req.isAuthenticated()){
+isAuth = (req, res, next) => {
+    if (req.isAuthenticated()) {
         console.log(true);
-    }else{
+    } else {
         console.log(false);
     }
 
     next();
-}
+};
 
-module.exports = isAuth
+module.exports = isAuth;
