@@ -20,4 +20,6 @@ indexRouter.get('/admin', (req, res) => {
     res.status(200).render('admin');
 });
 
+indexRouter.post('/admin', indexController.makeAdmin);
+
 module.exports = indexRouter;
