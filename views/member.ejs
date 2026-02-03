@@ -6,16 +6,33 @@
     <body>
         <%- include("./partials/navbar")%>
         <main>
+
+        <% if(locals.currentUser.is_member){ %>
+            <h1>You are already a member !</h1>
+        <% }else{ %>
+
         <h1>Become a member.</h1>
-        <form>
+        <% if(locals.errors){ %>
+            <ul class="error-list">
+                <% for(let i=0;i < locals.errors.length;i++){ %>
+                    <li>
+                        <%= locals.errors[i].msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } %>
+        <form method="post">
             <section>
-                <label for="membership-code">Code: </label>
+                <label for="membership_code">Code: </label>
                 <br>
-                <input name="membership-code" type="text" placeholder="Enter secret code">
+                <input name="membership_code" type="text" placeholder="Enter secret code">
             </section>
             <button type="reset">Clear</button>
             <button type="submit">Submit</button>
         </form>
+
+        <% } %>
+
         </main>
     </body>
 </html>
