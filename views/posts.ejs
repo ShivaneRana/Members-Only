@@ -9,6 +9,7 @@
 
         <h1>Posts</h1>
 
+        <% if(locals.currentUser){ %>
         <form class="post-header" method="post">
             <label for="post_text">Enter post: </label>
             <textarea name="post_text" placeholder="Enter posts"></textarea>
@@ -18,10 +19,16 @@
             </div>
         </form>
 
-        <!-- <div class="post-header">
+        <% }else{ %>
+
+        <div class="post-header">
             <h3>Log in to post!</h3>
             <a href="/log-in">Login</a>
-        </div> -->
+        </div>
+
+        <% } %>
+
+
 
         <% if(locals.posts.length !== 0){ %>
         <section class="global-posts">
