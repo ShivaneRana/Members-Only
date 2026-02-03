@@ -14,7 +14,7 @@ indexRouter.get('/member', (req, res) => {
     res.status(200).render('member');
 });
 
-indexRouter.post('/member', indexController.makeMember)
+indexRouter.post('/member', indexController.makeMember);
 
 indexRouter.get('/admin', (req, res) => {
     res.status(200).render('admin');
