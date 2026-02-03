@@ -28,7 +28,7 @@ let createTable = `
         mid INT REFERENCES members(mid)
     );
 
-    CREATE TABLE IF NOT EXISTS member_sessions (
+    CREATE TABLE IF NOT EXISTS sessions (
     sid TEXT PRIMARY KEY,              
     sess JSONB NOT NULL,               
     expire TIMESTAMPTZ NOT NULL         
