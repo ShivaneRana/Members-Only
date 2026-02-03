@@ -44,3 +44,12 @@ exports.enableMembership = async (id) => {
         console.error(err);
     }
 };
+
+exports.enableAdmin = async (id) => {
+    try {
+        await pool.query('UPDATE members SET is_admin = true WHERE mid = $1', [id]);
+    } catch (err) {
+        console.error(err);
+    }
+};
+
