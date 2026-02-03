@@ -28,3 +28,11 @@ exports.fetchPosts = async () => {
         return [];
     }
 };
+
+exports.addPosts = async (id,text) => {
+    try{
+        await pool.query('INSERT INTO global_chat (message_text,mid) VALUES ($1,$2)',[text,id]);
+    }catch(err){
+        console.error(err);
+    }
+}
