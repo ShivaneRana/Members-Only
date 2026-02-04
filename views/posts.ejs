@@ -32,20 +32,29 @@
         <section class="global-posts">
             <% for(let i = 0 ; i < posts.length; i++){ %>
                 <article class="posts">
+                    <!-- when you try to access currentUser but the user is not logged in so currentUser is not assinged -->
                     <% if(locals.currentUser){ %>
-                        <p>Username: <%= posts[i].username%></p>
+                        <% if(locals.currentUser.is_member){ %>
+                            <p>Username: <%= posts[i].username%></p>
+                        <% }else{ %>
+                            <p>Username: *******</p>
+                        <% } %>
                     <% }else{ %>
-                        <p>Username: *******</p>
-                    <% } %>
-                    <% if(locals.currentUser){ %>
-                        <p>Created_at: <%= posts[i].created_at%></p>
-                    <% }else{ %>
-                        <p>Created_at: *******</p>
+                            <p>Username: *******</p>
                     <% } %>
 
 
-                    <p>Admin: <%= posts[i].is_admin%></p>
-                    <p>Member: <%= posts[i].is_member%></p>
+                    <% if(locals.currentUser){ %>
+                        <% if(locals.currentUser.is_member){ %>
+                            
+                            <p>Created_at: <%= posts[i].created_at%></p>
+                        <% }else{ %>
+                            <p>Created_at: *******</p>
+                        <% } %>
+                    <% }else{ %>
+                            <p>Created_at: *******</p>
+                    <% } %>
+
                     <p>Message: <%= posts[i].message_text%></p>
                 </article>
 
