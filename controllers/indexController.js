@@ -34,7 +34,7 @@ const validationObject_admin = [
                 throw new Error('Wrong code');
             }
         }),
-]
+];
 
 exports.makeMember = [
     validationObject_member,

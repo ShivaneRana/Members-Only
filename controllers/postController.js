@@ -5,10 +5,10 @@ exports.renderPosts = async (req, res) => {
     return res.status(200).render('posts', { posts });
 };
 
-exports.createPosts = async(req,res) => {
+exports.createPosts = async (req, res) => {
     const post = req.body.post_text;
-    const {mid} = req.user;
-    await db.addPosts(mid,post);
-    return res.status(200).redirect("/posts");
+    const { mid } = req.user;
+    await db.addPosts(mid, post);
+    return res.status(200).redirect('/posts');
     // db.addPosts()
-}
+};

@@ -52,4 +52,3 @@ exports.enableAdmin = async (id) => {
         console.error(err);
     }
 };
-
