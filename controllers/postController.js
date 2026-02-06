@@ -12,16 +12,16 @@ exports.createPosts = async (req, res) => {
     return res.status(200).redirect('/posts');
 };
 
-exports.deletePosts = async(req,res) => {
-    if(!req.user){
+exports.deletePosts = async (req, res) => {
+    if (!req.user) {
         return res.status(200).redirect('/log-in');
     }
 
-    if(!req.user.is_admin){
+    if (!req.user.is_admin) {
         return res.status(200).redirect('/admin');
     }
 
-    const {postId} = req.params;
+    const { postId } = req.params;
     await db.removePost(postId);
     return res.status(200).redirect('/posts');
-}
+};

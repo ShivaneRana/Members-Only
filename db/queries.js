@@ -54,9 +54,9 @@ exports.enableAdmin = async (id) => {
 };
 
 exports.removePost = async (id) => {
-    try{
-        await pool.query("DELETE FROM global_chat WHERE global_chat.tid = $1",[id])
-    }catch(err){
-        console.error(err)
+    try {
+        await pool.query('DELETE FROM global_chat WHERE global_chat.tid = $1', [id]);
+    } catch (err) {
+        console.error(err);
     }
-}
+};
