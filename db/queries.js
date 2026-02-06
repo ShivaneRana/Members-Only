@@ -19,7 +19,7 @@ exports.fetchPosts = async () => {
     try {
         const rows = (
             await pool.query(
-                'SELECT m.username,m.is_member,m.is_admin,g.created_at,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;'
+                'SELECT g.tid,m.username,m.is_member,m.is_admin,g.created_at,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;'
             )
         ).rows;
         return rows;
@@ -52,3 +52,11 @@ exports.enableAdmin = async (id) => {
         console.error(err);
     }
 };
+
+exports.removePost = async (id) => {
+    try{
+        await pool.query("DELETE FROM global_chat WHERE global_chat.tid = $1",[id])
+    }catch(err){
+        console.error(err)
+    }
+}
