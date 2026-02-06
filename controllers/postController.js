@@ -10,5 +10,4 @@ exports.createPosts = async (req, res) => {
     const { mid } = req.user;
     await db.addPosts(mid, post);
     return res.status(200).redirect('/posts');
-    // db.addPosts()
 };
