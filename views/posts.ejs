@@ -49,7 +49,7 @@
                     <% if(locals.currentUser){ %>
                         <% if(locals.currentUser.is_member){ %>
                             
-                            <p>Created_at: <%= posts[i].created_at%></p>
+                            <p>Created_at: <%= posts[i].formatted_date%></p>
                         <% }else{ %>
                             <p>Created_at: *******</p>
                         <% } %>
