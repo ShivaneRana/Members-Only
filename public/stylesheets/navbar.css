@@ -44,18 +44,18 @@
     min-width: max-content;
 }
 
-.link-button{
+.link-button {
     width: max-content;
     background-color: var(--color-tertiary);
     text-align: center;
     border-radius: var(--border-radius);
-    font-weight:600;
+    font-weight: 600;
     background-color: black;
     color: white;
     padding: 15px 10px;
 }
 
-.link-button:hover{
+.link-button:hover {
     background-color: grey;
 }
 

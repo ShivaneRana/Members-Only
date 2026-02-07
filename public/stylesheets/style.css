@@ -2,7 +2,7 @@
     scroll-behavior: smooth;
     --border-radius: 5px;
     --color-background: #0e1217;
-    --color-text:#ffffff;
+    --color-text: #ffffff;
     --color-red: red;
     --color-violet: #8ab4f8;
 }
@@ -16,7 +16,9 @@
 body {
     width: 100%;
     min-height: 100vh;
-    font-family: Arial, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana , system-ui;
+    font-family:
+        Arial, 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva,
+        Verdana, system-ui;
     font-size: 16px;
     display: flex;
     flex-direction: column;

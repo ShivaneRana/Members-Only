@@ -21,7 +21,6 @@ exports.fetchPosts = async () => {
             await pool.query(
                 //'SELECT g.tid,m.username,m.is_member,m.is_admin,g.created_at,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;'
                 `SELECT g.tid,m.username,m.is_member,m.is_admin,TO_CHAR(created_at, 'Mon FMDD, YYYY') AS formatted_date,g.message_text FROM global_chat g JOIN members m ON g.mid = m.mid ORDER BY g.created_at;`
-
             )
         ).rows;
         return rows;
