@@ -6,25 +6,25 @@
         <div>
             <li>
                 <% if(locals.currentUser){ %>            
-                    <a class="link" href="/member">Membership</a>
+                    <a class="link link-button" href="/member">Membership</a>
                 <% } %>
             </li>
             <li>
                 <% if(locals.currentUser){ %>            
-                    <a class="link" href="/admin">Moderator</a>
+                    <a class="link link-button" href="/admin">Moderator</a>
                 <% } %>
             </li>
             <li>
-                <a class="link" href="/posts">Posts</a>
+                <a class="link link-button" href="/posts">Posts</a>
             </li>
             <li>
-                <a class="link" href="/sign-up">Register</a>
+                <a class="link link-button" href="/sign-up">Register</a>
             </li>
             <li>
                 <% if(locals.currentUser){ %>            
-                    <a class="link" href="/log-out">Logout</a>
+                    <a class="link link-button" href="/log-out">Logout</a>
                 <% }else{ %>
-                    <a class="link" href="/log-in">Login</a>
+                    <a class="link link-button" href="/log-in">Login</a>
                 <% } %>
             </li>
         </div>
