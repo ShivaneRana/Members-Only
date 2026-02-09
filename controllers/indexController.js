@@ -38,28 +38,28 @@ const validationObject_admin = [
 
 exports.makeMember = [
     validationObject_member,
-    (req, res) => {
+    async (req, res) => {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
             return res.status(200).render('member', { errors: errors.array() });
         }
 
-        db.enableMembership(req.user.mid);
+        await db.enableMembership(req.user.mid);
         return res.status(200).redirect('/member');
     },
 ];
 
 exports.makeAdmin = [
     validationObject_admin,
-    (req, res) => {
+    async (req, res) => {
         const errors = validationResult(req);
 
         if (!errors.isEmpty()) {
             return res.status(200).render('admin', { errors: errors.array() });
         }
 
-        db.enableAdmin(req.user.mid);
+        await db.enableAdmin(req.user.mid);
         return res.status(200).redirect('/admin');
     },
 ];
