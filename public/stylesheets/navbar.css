@@ -73,14 +73,14 @@
     }
 }
 
-@media (max-width: 1300px ) {
+@media (max-width: 1300px) {
     .navbar > ul > li > a > h2 {
         display: none;
     }
 }
 
-@media (max-width: 750px ) {
-    .link-button{
+@media (max-width: 750px) {
+    .link-button {
         padding: 0px;
     }
 }
