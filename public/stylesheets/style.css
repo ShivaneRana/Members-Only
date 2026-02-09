@@ -68,6 +68,22 @@ main {
     justify-content: space-around;
 }
 
+.welcome-link{
+    background-color: var(--color-tertiary);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+    text-decoration: none;
+}
+
+.welcome-link:hover{
+    background-color: grey;
+}
+
 .chat-img {
     position: absolute;
     top: -250px;
@@ -93,6 +109,7 @@ main {
 }
 
 .posts {
+    position: relative;
     width: 100%;
     min-width: 400px;
     border: none;
@@ -104,6 +121,22 @@ main {
     gap: 10px;
     margin-bottom: 20px;
 }
+
+.delete-post-button{
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    background-color: var(--color-tertiary);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border: none;
+    background-color: black;
+    color: white;
+    padding: 5px 5px;
+    text-decoration: none;
+}
+
 
 .post-header {
     width: 60%;
