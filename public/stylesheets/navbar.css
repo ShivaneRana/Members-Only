@@ -10,6 +10,7 @@
     padding: 0px 20px;
     border-bottom: 1px solid black;
     margin-bottom: 30px;
+    transition: var(--transition-v1);
 }
 
 .navbar > ul {
@@ -49,14 +50,15 @@
     background-color: var(--color-tertiary);
     text-align: center;
     border-radius: var(--border-radius);
-    font-weight: 600;
+    /* font-weight: 600;
     background-color: black;
-    color: white;
+    color: white; */
     padding: 15px 10px;
 }
 
 .link-button:hover {
-    background-color: grey;
+    text-decoration: underline;
+    /* background-color: grey; */
 }
 
 @keyframes float {
@@ -71,8 +73,14 @@
     }
 }
 
-@media (max-width: 960px) {
+@media (max-width: 1300px ) {
     .navbar > ul > li > a > h2 {
         display: none;
+    }
+}
+
+@media (max-width: 750px ) {
+    .link-button{
+        padding: 0px;
     }
 }
