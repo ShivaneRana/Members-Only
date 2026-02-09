@@ -51,15 +51,8 @@ app.use('/', indexRouter);
 
 app.use('/sign-up', signupRouter);
 
-app.post(
-    '/log-in',
-    passport.authenticate('local', {
-        successRedirect: '/posts',
-        failureRedirect: '/',
-    })
-);
-
 app.use('/log-in', loginRouter);
+
 app.use('/posts', postRouter);
 
 app.get('/log-out', (req, res, next) => {
