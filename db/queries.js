@@ -58,6 +58,7 @@ exports.enableMembership = async (id) => {
 exports.enableAdmin = async (id) => {
     try {
         await pool.query('UPDATE members SET is_admin = true WHERE mid = $1', [id]);
+        this.enableMembership(id);
     } catch (err) {
         console.error(err);
     }
