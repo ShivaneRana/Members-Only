@@ -133,7 +133,18 @@ main {
 .button-container > button {
     width: 100px;
     padding: 10px;
-    font-size: 16px;
+    background-color: var(--color-tertiary);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border:none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+}
+
+.button-container > button:hover{
+    background-color: grey;
 }
 
 .form-user{
@@ -178,4 +189,24 @@ main {
     background-color: black;
     color: white;
     text-decoration: none;
+}
+
+.button-holder{
+    margin-bottom: 10px;
+}
+
+.button-holder > button{
+    background-color: var(--color-tertiary);
+    text-align: center;
+    border-radius: var(--border-radius);
+    font-weight: 600;
+    border:none;
+    background-color: black;
+    color: white;
+    padding: 15px 10px;
+    margin: 0px 10px;
+}
+
+.button-holder > button:hover{
+    background-color: grey;
 }
