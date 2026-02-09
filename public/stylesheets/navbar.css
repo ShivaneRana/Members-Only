@@ -74,8 +74,14 @@
 }
 
 @media (max-width: 1300px) {
-    .navbar > ul > li > a > h2 {
+    .navbar > ul > li:nth-child(1){
+        /* background-color: red; */
         display: none;
+    }
+
+    .navbar > ul > div{
+        justify-content: center;
+        width: 100%;
     }
 }
 
