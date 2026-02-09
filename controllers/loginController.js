@@ -1,4 +1,6 @@
+const db = require('../db/queries');
 const { body, validationResult } = require('express-validator');
+const passport = require('passport');
 
 const validationObject = [
     body('username')
@@ -8,7 +10,13 @@ const validationObject = [
         .isLength({ max: 64 })
         .withMessage('Username cannot have more than 64 characters')
         .matches(/^[A-Za-z0-9!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]+$/)
-        .withMessage('Username can contain only letters, numbers, and special characters'),
+        .withMessage('Username can contain only letters, numbers, and special characters')
+        .custom(async (value) => {
+            const user = await db.checkMember(String(value));
+            if(!user){
+                throw new Error('Username does not exists');
+            }
+        }),
 
     body('password')
         .trim()
@@ -26,11 +34,15 @@ exports.renderLoginPage = (req, res) => {
 
 exports.postLoginUser = [
     validationObject,
-    async (req, res) => {
+    async (req, res, next) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.status(200).render('log-in', { errors: errors.array() });
         }
-        return res.status(200).render('posts');
+
+        passport.authenticate('local', {
+        successRedirect: '/posts',
+        failureRedirect: '/',
+        })(req,res,next);
     },
 ];
