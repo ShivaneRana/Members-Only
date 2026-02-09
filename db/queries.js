@@ -15,6 +15,15 @@ exports.fetchMember = async (id) => {
     return member;
 };
 
+exports.checkMember = async (name) => {
+    const exists = (await pool.query('SELECT * FROM members WHERE username = $1', [name])).rows[0];
+    if(!exists){
+        return false
+    }
+
+    return true;
+}
+
 exports.fetchPosts = async () => {
     try {
         const rows = (
