@@ -9,10 +9,15 @@
         
 
         <% if(locals.currentUser.is_admin){ %>
-            <h1>You are already a admin !</h1>
+            <h1 class="header-confirmation">You are already a admin !</h1>
         <% }else{ %>
 
-        <h1>Become an admin.</h1>
+        <form method="post" class="form-user">
+            <section class="section-user-input">
+                <label class="label-prompt-membership-admin" for="admin_code">Become an admin: </label>
+                <br>
+                <input name="admin_code" type="text" placeholder="Enter secret code">
+            </section>
         <% if(locals.errors){ %>
             <ul class="error-list">
                 <% for(let i=0;i < locals.errors.length;i++){ %>
@@ -22,14 +27,10 @@
                     <% } %>
             </ul>
             <% } %>
-        <form method="post">
-            <section>
-                <label for="admin_code">Code: </label>
-                <br>
-                <input name="admin_code" type="text" placeholder="Enter secret code">
-            </section>
-            <button type="reset">Clear</button>
-            <button type="submit">Submit</button>
+            <div class="button-holder">
+                <button type="reset">Clear</button>
+                <button type="submit">Submit</button>
+            </div>
         </form>
         <% } %>
 
