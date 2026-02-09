@@ -137,17 +137,17 @@ main {
     text-align: center;
     border-radius: var(--border-radius);
     font-weight: 600;
-    border:none;
+    border: none;
     background-color: black;
     color: white;
     padding: 15px 10px;
 }
 
-.button-container > button:hover{
+.button-container > button:hover {
     background-color: grey;
 }
 
-.form-user{
+.form-user {
     width: 60%;
     min-width: 400px;
     display: flex;
@@ -157,27 +157,27 @@ main {
     gap: 20px;
 }
 
-.form-user > div{
+.form-user > div {
     width: 100%;
     text-align: center;
 }
 
-.section-user-input{
+.section-user-input {
     display: flex;
     flex-direction: column;
-    align-items: flex-start; 
+    align-items: flex-start;
     justify-content: center;
     width: 100%;
 }
 
-.section-user-input > input{
+.section-user-input > input {
     padding: 5px;
     width: 100%;
     margin-top: 5px;
     font-size: 16px;
 }
 
-.para-question{
+.para-question {
     margin-bottom: 100px;
 }
 
@@ -191,22 +191,22 @@ main {
     text-decoration: none;
 }
 
-.button-holder{
+.button-holder {
     margin-bottom: 10px;
 }
 
-.button-holder > button{
+.button-holder > button {
     background-color: var(--color-tertiary);
     text-align: center;
     border-radius: var(--border-radius);
     font-weight: 600;
-    border:none;
+    border: none;
     background-color: black;
     color: white;
     padding: 15px 10px;
     margin: 0px 10px;
 }
 
-.button-holder > button:hover{
+.button-holder > button:hover {
     background-color: grey;
 }
