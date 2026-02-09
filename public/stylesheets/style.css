@@ -68,7 +68,7 @@ main {
     justify-content: space-around;
 }
 
-.welcome-link{
+.welcome-link {
     background-color: var(--color-tertiary);
     text-align: center;
     border-radius: var(--border-radius);
@@ -80,7 +80,7 @@ main {
     text-decoration: none;
 }
 
-.welcome-link:hover{
+.welcome-link:hover {
     background-color: grey;
 }
 
@@ -122,7 +122,7 @@ main {
     margin-bottom: 20px;
 }
 
-.delete-post-button{
+.delete-post-button {
     position: absolute;
     right: 20px;
     top: 20px;
@@ -136,7 +136,6 @@ main {
     padding: 5px 5px;
     text-decoration: none;
 }
-
 
 .post-header {
     width: 60%;

@@ -13,7 +13,7 @@ const validationObject = [
         .withMessage('Username can contain only letters, numbers, and special characters')
         .custom(async (value) => {
             const user = await db.checkMember(String(value));
-            if(!user){
+            if (!user) {
                 throw new Error('Username does not exists');
             }
         }),
@@ -41,8 +41,8 @@ exports.postLoginUser = [
         }
 
         passport.authenticate('local', {
-        successRedirect: '/posts',
-        failureRedirect: '/',
-        })(req,res,next);
+            successRedirect: '/posts',
+            failureRedirect: '/',
+        })(req, res, next);
     },
 ];
