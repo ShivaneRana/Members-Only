@@ -7,10 +7,20 @@
         <%- include("./partials/navbar")%>
         <main>
 
+
         <% if(locals.currentUser){ %>
         <form class="post-header" method="post">
             <label for="post_text">Enter post: </label>
             <textarea name="post_text" placeholder="Enter posts"></textarea>
+        <% if(locals.errors){ %>
+            <ul class="error-list">
+                <% for(let i=0;i < locals.errors.length;i++){ %>
+                    <li>
+                        <%= locals.errors[i].msg %>
+                    </li>
+                    <% } %>
+            </ul>
+            <% } %>
             <div class="button-container">
                 <button type="reset">Clear</button>
                 <button type="submit">Post</button>
