@@ -8,7 +8,7 @@ const dotenv = require('dotenv').config({
 });
 
 const pool = new Pool({
-    connectionString: process.env.DATABASE_STRING_DEV,
+    connectionString: process.env.DATABASE_STRING_PROD,
 });
 
 module.exports = pool;
