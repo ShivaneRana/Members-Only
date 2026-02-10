@@ -46,12 +46,12 @@ let insertData = `
     ('Eve',     'Taylor',  'eve',     'password5', FALSE, FALSE),
     ('Frank',   'Miller',  'frank',   'password6', TRUE,  FALSE);
 
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',1);
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',2);
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',3);
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',4);
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',5);
-    INSERT INTO global_chat(message_text,created_at,mid) VALUES('example number 1','2026-11-23',6);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('Wow this website does work huh?','2026-01-23',1);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('I want to explorer the world','2025-02-13',2);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('Attack on titan ending was mid asf','2025-02-20',3);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('This year was quite productive','2025-11-27',4);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('Today is 1st day of febuary','2026-02-01',5);
+    INSERT INTO global_chat(message_text,created_at,mid) VALUES('Another year gone by as a single guy','2025-12-28',6);
 `;
 
 if (argv[2] === 'dev') {
