@@ -2,7 +2,8 @@
 
 A role-based message board where post authorship and timestamps are hidden from non-members. Users can sign up, unlock membership or admin privileges via secret codes, and interact with a shared global chat feed.
 
-<!-- Screenshot: landing page / welcome screen -->
+![screenshot](screenshots/1.png)
+![screenshot](screenshots/2.png)
 
 ---
 
@@ -157,23 +158,19 @@ Managed automatically by `connect-pg-simple`.
 
 ## Usage
 
-<!-- Screenshot: sign-up page -->
-
 **Registering:** Go to `/sign-up` and fill in your name, username, and password.
 
-<!-- Screenshot: posts page as a guest (masked usernames) -->
+![screenshot](screenshots/2.png)
 
 **As a Guest:** You can browse posts but usernames and timestamps are hidden.
 
-<!-- Screenshot: member unlock page -->
-
 **Becoming a Member:** Navigate to `/member` and enter the membership code. Once unlocked, all post details become visible.
 
-<!-- Screenshot: posts page as a member (full details visible) -->
+![screenshot](screenshots/3.png)
 
 **Becoming an Admin:** Navigate to `/admin` and enter the admin code. Admins gain the ability to delete any post and are automatically granted membership as well.
 
-<!-- Screenshot: posts page as an admin (delete buttons visible) -->
+![screenshot](screenshots/4.png)
 
 ---
 
